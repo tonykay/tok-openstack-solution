@@ -1,0 +1,8 @@
+- name: "Create flavor {{ osp_flavor_name }}"
+  os_nova_flavor:
+     cloud:   "{{ osp_cloud_name }}"
+     state:   "{{ osp_state }}"
+     name:    "{{ osp_flavor_name }}"
+     ram:     "{{ osp_flavor_ram }}"
+     vcpus:   "{{ osp_flavor_vcpus }}"
+     disk:    "{{ osp_flavor_disk }}"

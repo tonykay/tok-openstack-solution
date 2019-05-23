@@ -1,0 +1,8 @@
+---
+osp_cloud_name:     ospcloud
+osp_state:          present
+osp_flavor_name:    m2.small
+osp_flavor_ram:     2048
+osp_flavor_vcpus:   1
+osp_flavor_disk:    10
+...
