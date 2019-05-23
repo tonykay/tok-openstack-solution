@@ -1,0 +1,7 @@
+---
+yum_packages_to_remove:
+  httpie
+  python-pip
+  haproxy
+  tomcat
+  postgresql-server
