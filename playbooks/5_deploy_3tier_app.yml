@@ -1,4 +1,14 @@
 ---
+- name: Setup common config
+  hosts: all:!jumpbox
+  gather_facts: false
+  become: yes
+  tags:
+    - stage5
+
+  roles:
+    - 3tier-common
+
 - name: Setup frontend load-balancer tier
   hosts: frontends
   gather_facts: false
@@ -8,8 +18,7 @@
     - frontends
 
   roles:
-    - common
-    - frontend-tier
+    - 3tier-frontend-tier
 
 - name: Setup app tier
   hosts: apps
@@ -20,8 +29,7 @@
     - apps
 
   roles:
-    - common
-    - app-tier
+    - 3tier-app-tier
 
 - name: Setup database tier
   hosts: appdbs
@@ -31,6 +39,5 @@
     - databases
 
   roles:
-    - common
-    - geerlingguy.postgresql
+    - 3tier-geerlingguy.postgresql
 ...
