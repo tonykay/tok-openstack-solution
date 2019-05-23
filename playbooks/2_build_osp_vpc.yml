@@ -6,5 +6,6 @@
     - build_vpc
 
   roles:
-   -  osp-setup
+    - osp-flavor 
+    - osp-setup
 ...
