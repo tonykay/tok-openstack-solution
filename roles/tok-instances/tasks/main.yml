@@ -7,10 +7,10 @@
     flavor: m2.small
     security_groups: "{{ item.security_group_name }}"
     key_name: ansible_ssh
-    wait: yes
+    wait: no
     nics:
-    - net-name: int_network
-    - net-name: ext_network
+      - net-name: int_network
+      - net-name: ext_network
     userdata: |
       #!/bin/bash
       curl -o /tmp/openstack.pub http://www.opentlc.com/download/ansible_bootcamp/openstack_keys/openstack.pub
